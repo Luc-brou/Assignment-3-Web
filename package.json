@@ -1,0 +1,20 @@
+{
+  "name": "ticketbase-api",
+  "version": "1.0.0",
+  "description": "My event ticketbase API.",
+  "homepage": "https://github.com/Luc-brou/Assignment-3-Mobile#readme",
+  "bugs": {
+    "url": "https://github.com/Luc-brou/Assignment-3-Mobile/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Luc-brou/Assignment-3-Mobile.git"
+  },
+  "license": "ISC",
+  "author": "Luc Brousseau",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

@@ -1,9 +1,9 @@
 {
-  "name": "photo-album-api",
+  "name": "ticketbase-api",
   "version": "1.0.0",
-  "description": "My photo album web app API.",
+  "description": "My event ticketbase API.",
   "license": "ISC",
-  "author": "Mike Trumbull",
+  "author": "Luc Brousseau",
   "type": "module",
   "main": "app.js",
   "scripts": {
@@ -14,6 +14,10 @@
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
-    "mssql": "^12.0.0"
+    "express-validator": "^7.3.0",
+    "mssql": "^12.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
   }
 }

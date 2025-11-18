@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
 import router from './routes.js';
@@ -6,14 +7,20 @@ const port = process.env.PORT || 3000;
 const app = express();
 
 // Middleware
+app.use(cors()); // allow cross-origin requests early
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static('public'));
-app.use(cors()); // to allow React app to make calls to the API
+app.use(express.static('public')); // serve static files from public/
 
-// Route: /api/photos/...
-app.use('/api/photos', router);
+// API routes
+app.use('/api/concerts', router);
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
-});
+// start server
+try {
+    app.listen(port, () => {
+        console.log(`Server listening on port ${port}`);
+    });
+} catch (err) {
+    console.error('Failed to start server', err);
+    process.exit(1);
+}
